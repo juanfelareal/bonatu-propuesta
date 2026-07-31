@@ -107,6 +107,8 @@
         .pkg-price { font-size: 30px; font-weight: 900; color: var(--ink); letter-spacing: -1px; line-height: 1; }
         .pkg-unit { font-size: 12px; color: #9ca3af; font-weight: 600; margin-top: 4px; }
         .pkg-aud { font-size: 12.5px; font-style: italic; color: #9ca3af; margin-top: 10px; line-height: 1.4; }
+        .pkg-old-price { font-size: 18px; font-weight: 600; color: #9ca3af; text-decoration: line-through; margin-bottom: 4px; }
+        .pkg-discount { display: inline-block; background: var(--green); color: #fff; font-size: 10px; font-weight: 800; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-left: 8px; }
 
         /* Section divider */
         .section-divider { margin-top: 52px; padding-top: 20px; border-top: 2px solid var(--line); }
@@ -159,7 +161,7 @@
 
         <section>
             <h2>Lo que conversamos</h2>
-            <p>Llevan un año con <span class="brand">Bonatu</span> y cinco años de experiencia en repostería saludable. Tienen un canal B2B consolidado (Vita Integra, Zona Azul, Pasteur) y desde noviembre abrieron el canal B2C por WhatsApp, que ya pasó de <strong>$11 millones a $18-19 millones mensuales</strong> con una inversión en pauta de $3.4M.</p>
+            <p>Llevan un año con <span class="brand">Bonatu</span> y cinco años de experiencia en repostería saludable. Tienen un canal B2B consolidado (Vita Integral, Zona Azul, Pasteur) y desde noviembre abrieron el canal B2C por WhatsApp, que ya pasó de <strong>$11 millones a $18-19 millones mensuales</strong> con una inversión en pauta de $3.4M.</p>
             <p>Ahora quieren dar el salto: montar la página web, estructurar packs para subir el ticket promedio, y empezar a despachar a nivel nacional con productos como los <strong>MOODs</strong>, las tartas vascas y los brownies personales —que ya tienen empaque transportable—.</p>
             <p>Acaban de terminar su nuevo centro de producción con INVIMA, así que la capacidad operativa ya está. Falta el canal digital.</p>
         </section>
@@ -170,7 +172,7 @@
             <p>Además, el ticket promedio de un producto individual no da para cubrir el envío. <strong>Nadie va a pagar $15.000 de envío por un producto de $9.500</strong>. Por eso hay que estructurar packs y combos que suban el ticket y hagan el envío viable.</p>
             <div class="kpi-star">
                 <span class="kpi-star-tag">Caso Bytes</span>
-                <span class="kpi-star-text">Trabajamos con <b>Bytes</b>, una marca de brownies y alfajores que estaba en una situación similar. Su ticket promedio era de <b>$23.000</b>. Con la estrategia de packs y la tienda online, hoy el ticket promedio está en <b>$123.000</b> y han llegado a meses de más de <b>$20 millones</b> en ventas web.</span>
+                <span class="kpi-star-text">Trabajamos con <b>Bytes</b>, una marca de brownies y alfajores que estaba en una situación similar. Su ticket promedio era de <b>$23.000</b>. Con la estrategia de packs y la tienda online, <b>hoy el ticket promedio está en $123.000</b> —más de 5 veces lo que era antes.</span>
             </div>
         </section>
 
@@ -205,14 +207,38 @@
         <section class="section-divider">
             <h2>Servicio 1: Puesta a punto</h2>
             <p>Es el arranque. En ~30 días dejamos todo listo para empezar a operar: la tienda montada, el email marketing configurado y la estrategia de pauta definida.</p>
-            <ul class="inc">
-                <li><b>Tienda Shopify completa</b> — diseño profesional, productos cargados, pasarela de pagos, envíos configurados</li>
-                <li><b>Estrategia de packs y combos</b> — para subir el ticket promedio y hacer viable el envío nacional</li>
-                <li><b>Email marketing configurado</b> — flujos automáticos (carrito abandonado, bienvenida, pedido, recompra) + primeras campañas</li>
-                <li><b>Diagnóstico de pauta</b> — revisamos todo lo que han hecho hasta ahora, qué funcionó y qué no</li>
-                <li><b>Estrategia general</b> — el plan de acción para los primeros meses</li>
-                <li><b>Propuesta de creadores UGC</b> — identificamos los primeros 7-10 creadores para arrancar</li>
-            </ul>
+            <div class="pillars">
+                <div class="pillar">
+                    <div class="pillar-n">🛒</div>
+                    <div class="pillar-t">Tienda Shopify completa</div>
+                    <p>Diseño profesional, productos cargados, pasarela de pagos, envíos configurados.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-n">📦</div>
+                    <div class="pillar-t">Estrategia de packs</div>
+                    <p>Combos y bundles para subir el ticket promedio y hacer viable el envío nacional.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-n">📧</div>
+                    <div class="pillar-t">Email marketing</div>
+                    <p>Flujos automáticos (carrito abandonado, bienvenida, pedido, recompra) + primeras campañas.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-n">📊</div>
+                    <div class="pillar-t">Diagnóstico de pauta</div>
+                    <p>Revisamos lo que han hecho, qué funcionó y qué no, y definimos la estrategia.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-n">🎯</div>
+                    <div class="pillar-t">Estrategia general</div>
+                    <p>El plan de acción para los primeros meses de operación del e-commerce.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-n">🎬</div>
+                    <div class="pillar-t">Propuesta UGC</div>
+                    <p>Identificamos los primeros 7-10 creadores para arrancar con contenido auténtico.</p>
+                </div>
+            </div>
             <p class="note"><strong>Ustedes nos pasan:</strong> fotos de productos, información de precios/packs, y abren la cuenta en la pasarela de pagos (Wompi, Mercado Pago, etc.). Del resto nos encargamos nosotros.</p>
         </section>
 
@@ -268,9 +294,10 @@
             <div class="sublabel">Puesta a punto (pago único)</div>
             <div class="pkgs" style="grid-template-columns: 1fr;">
                 <div class="pkg recommended">
-                    <div class="pkg-tag">Arranque</div>
+                    <div class="pkg-tag">Precio emprendedor</div>
                     <div class="pkg-name">Puesta a punto</div>
                     <div class="pkg-sub">Tienda + Email + Diagnóstico + Estrategia</div>
+                    <div class="pkg-old-price">$6.900.000<span class="pkg-discount">-14%</span></div>
                     <div class="pkg-price">$5.900.000</div>
                     <div class="pkg-aud">IVA 0% (desarrollo web para persona natural)</div>
                 </div>
