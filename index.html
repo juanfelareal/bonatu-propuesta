@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce — Bonatu x LA REAL</title>
+
+    <meta property="og:title" content="E-commerce — Bonatu x LA REAL">
+    <meta property="og:description" content="Propuesta de tienda online en Shopify + acompañamiento mensual para escalar a nivel nacional.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="logo-la-real.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #F5F0EB;
+            --ink: #14201c;
+            --muted: #6b7280;
+            --line: rgba(13,27,42,0.1);
+            --green: #16a34a;
+            --navy: #0D1B2A;
+            --card: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+
+        .page { max-width: 860px; margin: 0 auto; padding: 64px 40px 80px; }
+
+        .doc-head { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 28px; border-bottom: 1px solid var(--line); margin-bottom: 44px; }
+        .doc-head img.lareal { height: 26px; filter: brightness(0); opacity: 0.9; }
+        .doc-meta { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); text-align: right; }
+
+        .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
+        h1 { font-size: 42px; font-weight: 900; letter-spacing: -1.8px; line-height: 1.08; margin-bottom: 18px; max-width: 740px; }
+        .lede { font-size: 18px; color: #374151; max-width: 680px; font-weight: 400; }
+
+        section { margin-top: 52px; }
+        h2 { font-size: 13px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+        p { font-size: 16px; color: #374151; margin-bottom: 14px; }
+        p strong { color: var(--ink); font-weight: 700; }
+        em { font-style: italic; }
+        .brand { font-weight: 700; font-style: italic; }
+        .sublabel { font-size: 12px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin: 30px 0 14px; }
+
+        .note { font-size: 14.5px; color: var(--muted); background: rgba(22,163,74,0.06); border-left: 3px solid var(--green); padding: 14px 18px; border-radius: 0 8px 8px 0; margin-top: 6px; }
+        .note strong { color: var(--green); }
+
+        /* Pillars (4 frentes) */
+        .pillars { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        .pillar { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px 26px; }
+        .pillar-n { font-size: 14px; font-weight: 800; color: var(--green); letter-spacing: 2px; margin-bottom: 10px; }
+        .pillar-t { font-size: 17px; font-weight: 800; color: var(--ink); letter-spacing: -0.4px; margin-bottom: 8px; }
+        .pillar p { font-size: 14.5px; margin: 0; color: #4b5563; line-height: 1.5; }
+
+        /* Includes */
+        .inc { list-style: none; display: grid; grid-template-columns: 1fr; gap: 11px; }
+        .inc li { font-size: 15px; color: #4b5563; display: flex; gap: 10px; align-items: baseline; }
+        .inc li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; transform: translateY(-2px); }
+        .inc b { color: var(--ink); font-weight: 700; }
+
+        /* Process (plan) */
+        .plan { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        .step { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 20px; }
+        .step.first { border: 1.5px solid var(--green); }
+        .step-m { font-size: 12px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green); margin-bottom: 8px; }
+        .step-t { font-size: 16px; font-weight: 800; color: var(--ink); margin-bottom: 8px; letter-spacing: -0.3px; }
+        .step p { font-size: 13px; color: #4b5563; margin: 0; line-height: 1.45; }
+
+        /* Guarantee band */
+        .guarantee { background: var(--navy); color: #fff; border-radius: 14px; padding: 24px 28px; margin-top: 16px; display: flex; gap: 18px; align-items: center; }
+        .guarantee .g-tag { font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); background: var(--green); padding: 6px 13px; border-radius: 50px; white-space: nowrap; flex-shrink: 0; }
+        .guarantee p { color: #e5e7eb; font-size: 15px; margin: 0; line-height: 1.5; }
+        .guarantee b { color: #fff; }
+
+        /* KPI highlight */
+        .kpi-star { background: var(--navy); color: #fff; border-radius: 14px; padding: 22px 26px; display: flex; gap: 20px; align-items: center; margin-top: 6px; }
+        .kpi-star-tag { font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); background: var(--green); padding: 6px 13px; border-radius: 50px; white-space: nowrap; flex-shrink: 0; }
+        .kpi-star-text { font-size: 15.5px; line-height: 1.5; color: #e5e7eb; }
+        .kpi-star-text b { color: #fff; font-weight: 800; }
+
+        /* Marquee */
+        @keyframes mq-roll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        .mq { margin-top: 22px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+        .mq-row { overflow: hidden; padding: 14px 0; }
+        .mq-row + .mq-row { border-top: 1px solid var(--line); opacity: 0.45; }
+        .mq-track { display: flex; width: max-content; font-weight: 800; font-size: clamp(26px, 4vw, 46px); letter-spacing: -0.03em; line-height: 1; color: var(--ink); animation: mq-roll 55s linear infinite; }
+        .mq-row.reverse .mq-track { animation-direction: reverse; animation-duration: 70s; }
+        .mq-item { display: inline-flex; align-items: center; }
+        .mq-item .ast { color: var(--green); margin: 0 30px; font-weight: 400; font-size: 0.5em; }
+        @media (prefers-reduced-motion: reduce) { .mq-track { animation: none; } }
+
+        /* Pricing (pkgs) */
+        .pkgs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+        .pkg { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 26px 22px; position: relative; text-align: center; }
+        .pkg.recommended { border: 1.5px solid var(--green); }
+        .pkg-tag { position: absolute; top: -11px; left: 50%; transform: translateX(-50%); background: var(--green); color: #fff; font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; white-space: nowrap; }
+        .pkg-name { font-size: 12px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green); }
+        .pkg-sub { font-size: 13px; font-weight: 500; color: var(--muted); margin: 4px 0 14px; }
+        .pkg-price { font-size: 30px; font-weight: 900; color: var(--ink); letter-spacing: -1px; line-height: 1; }
+        .pkg-unit { font-size: 12px; color: #9ca3af; font-weight: 600; margin-top: 4px; }
+        .pkg-aud { font-size: 12.5px; font-style: italic; color: #9ca3af; margin-top: 10px; line-height: 1.4; }
+
+        /* Section divider */
+        .section-divider { margin-top: 52px; padding-top: 20px; border-top: 2px solid var(--line); }
+
+        /* Next + footer */
+        .next { margin-top: 56px; background: var(--navy); color: #fff; border-radius: 18px; padding: 40px 40px; }
+        .next h2 { color: #fff; border-bottom: 1px solid rgba(255,255,255,0.12); }
+        .next p { color: #cbd5e1; }
+        .cta { display: inline-flex; align-items: center; gap: 10px; margin-top: 16px; background: var(--green); color: #fff; text-decoration: none; font-weight: 700; font-size: 15px; padding: 13px 24px; border-radius: 50px; transition: opacity 0.2s ease; }
+        .cta:hover { opacity: 0.9; }
+        .cta svg { width: 18px; height: 18px; }
+
+        .foot { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+        .foot img { height: 16px; opacity: 0.7; vertical-align: middle; filter: brightness(0); }
+
+        @media (max-width: 720px) {
+            .page { padding: 40px 22px 60px; }
+            .doc-head { flex-direction: column; align-items: flex-start; gap: 14px; }
+            .doc-meta { text-align: left; }
+            h1 { font-size: 30px; letter-spacing: -1px; }
+            .lede { font-size: 16px; }
+            .pillars { grid-template-columns: 1fr; }
+            .plan { grid-template-columns: 1fr 1fr; }
+            .pkgs { grid-template-columns: 1fr; }
+            .pkg.recommended { order: -1; }
+            .guarantee, .kpi-star { flex-direction: column; align-items: flex-start; gap: 12px; }
+            .next { padding: 30px 24px; }
+        }
+
+        @media print {
+            body { background: #fff; }
+            .page { max-width: 100%; padding: 24px; }
+            .pillar, .step, .pkg { box-shadow: none; }
+            .cta { display: none; }
+            section { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <header class="doc-head">
+            <img class="lareal" src="logo-la-real.png" alt="LA REAL">
+            <div class="doc-meta">Propuesta · E-commerce<br>Julio 2026</div>
+        </header>
+
+        <div class="eyebrow">Para Felipe y Estefi / Bonatu</div>
+        <h1>Tu tienda online lista para escalar a nivel nacional</h1>
+        <p class="lede">Página web en Shopify, email marketing, pauta y contenido UGC. Todo listo para que <span class="brand">Bonatu</span> pase de vender por WhatsApp a tener un canal digital que sostenga el crecimiento que vienen logrando.</p>
+
+        <section>
+            <h2>Lo que conversamos</h2>
+            <p>Llevan un año con <span class="brand">Bonatu</span> y cinco años de experiencia en repostería saludable. Tienen un canal B2B consolidado (Vita Integra, Zona Azul, Pasteur) y desde noviembre abrieron el canal B2C por WhatsApp, que ya pasó de <strong>$11 millones a $18-19 millones mensuales</strong> con una inversión en pauta de $3.4M.</p>
+            <p>Ahora quieren dar el salto: montar la página web, estructurar packs para subir el ticket promedio, y empezar a despachar a nivel nacional con productos como los <strong>MOODs</strong>, las tartas vascas y los brownies personales —que ya tienen empaque transportable—.</p>
+            <p>Acaban de terminar su nuevo centro de producción con INVIMA, así que la capacidad operativa ya está. Falta el canal digital.</p>
+        </section>
+
+        <section>
+            <h2>Por qué una tienda online</h2>
+            <p>El canal de WhatsApp funciona, pero tiene un techo. Para escalar a nivel nacional necesitan una página donde cualquier persona —de Bogotá, Cali, Barranquilla— pueda entrar, armar su pedido y pagar sin tener que escribir a un WhatsApp.</p>
+            <p>Además, el ticket promedio de un producto individual no da para cubrir el envío. <strong>Nadie va a pagar $15.000 de envío por un producto de $9.500</strong>. Por eso hay que estructurar packs y combos que suban el ticket y hagan el envío viable.</p>
+            <div class="kpi-star">
+                <span class="kpi-star-tag">Caso Bytes</span>
+                <span class="kpi-star-text">Trabajamos con <b>Bytes</b>, una marca de brownies y alfajores que estaba en una situación similar. Su ticket promedio era de <b>$23.000</b>. Con la estrategia de packs y la tienda online, hoy el ticket promedio está en <b>$123.000</b> y han llegado a meses de más de <b>$20 millones</b> en ventas web.</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Los 4 frentes del servicio</h2>
+            <p>Para que el e-commerce funcione de verdad, hay que trabajar cuatro frentes en paralelo. Si falta uno, los otros no rinden igual.</p>
+            <div class="pillars">
+                <div class="pillar">
+                    <div class="pillar-n">01</div>
+                    <div class="pillar-t">Página web</div>
+                    <p>Tienda en Shopify optimizada para vender. Diseño profesional, pasarela de pagos, checkout fluido y envíos a nivel nacional.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-n">02</div>
+                    <div class="pillar-t">Email marketing</div>
+                    <p>Flujos automáticos (carrito abandonado, bienvenida, recompra) y campañas mensuales. La base de datos es oro para ventas futuras.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-n">03</div>
+                    <div class="pillar-t">Pauta</div>
+                    <p>Gestión de campañas en Meta (Instagram/Facebook). Probamos creativos, escalamos lo que funciona y optimizamos el costo por compra.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-n">04</div>
+                    <div class="pillar-t">Contenido UGC</div>
+                    <p>Videos con creadores reales que muestran el producto de forma auténtica. Es el tipo de contenido que mejor convierte en pauta.</p>
+                </div>
+            </div>
+            <p class="note">También podemos seguir corriendo campañas a <strong>WhatsApp</strong> en paralelo mientras la tienda web toma tracción. No es uno u otro.</p>
+        </section>
+
+        <section class="section-divider">
+            <h2>Servicio 1: Puesta a punto</h2>
+            <p>Es el arranque. En ~30 días dejamos todo listo para empezar a operar: la tienda montada, el email marketing configurado y la estrategia de pauta definida.</p>
+            <ul class="inc">
+                <li><b>Tienda Shopify completa</b> — diseño profesional, productos cargados, pasarela de pagos, envíos configurados</li>
+                <li><b>Estrategia de packs y combos</b> — para subir el ticket promedio y hacer viable el envío nacional</li>
+                <li><b>Email marketing configurado</b> — flujos automáticos (carrito abandonado, bienvenida, pedido, recompra) + primeras campañas</li>
+                <li><b>Diagnóstico de pauta</b> — revisamos todo lo que han hecho hasta ahora, qué funcionó y qué no</li>
+                <li><b>Estrategia general</b> — el plan de acción para los primeros meses</li>
+                <li><b>Propuesta de creadores UGC</b> — identificamos los primeros 7-10 creadores para arrancar</li>
+            </ul>
+            <p class="note"><strong>Ustedes nos pasan:</strong> fotos de productos, información de precios/packs, y abren la cuenta en la pasarela de pagos (Wompi, Mercado Pago, etc.). Del resto nos encargamos nosotros.</p>
+        </section>
+
+        <section>
+            <h2>Servicio 2: Acompañamiento mensual</h2>
+            <p>Una vez la tienda está en vivo, arranca el trabajo mes a mes. Nosotros nos encargamos de todo: optimizaciones en la web, email, pauta y contenido.</p>
+            <ul class="inc">
+                <li><b>Optimizaciones en la tienda</b> — cambios de precios, productos nuevos, ajustes de diseño, todo lo que necesiten</li>
+                <li><b>Gestión de email marketing</b> — campañas mensuales + optimización de flujos automáticos</li>
+                <li><b>Gestión de pauta</b> — campañas en Meta, pruebas de creativos, escalamiento de lo que funciona</li>
+                <li><b>Gestión de creadores UGC</b> — contacto, contratos, guiones, seguimiento de entregas</li>
+                <li><b>Reportes y análisis</b> — revisamos los números y les decimos qué ajustar</li>
+                <li><b>Reuniones de seguimiento</b> — para que siempre sepan qué estamos haciendo y por qué</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Plan de trabajo</h2>
+            <div class="plan">
+                <div class="step first">
+                    <div class="step-m">Mes 1</div>
+                    <div class="step-t">Puesta a punto</div>
+                    <p>Montamos la tienda, configuramos email, hacemos el diagnóstico de pauta y definimos la estrategia.</p>
+                </div>
+                <div class="step">
+                    <div class="step-m">Mes 2</div>
+                    <div class="step-t">Lanzamiento</div>
+                    <p>Prendemos pauta con el nuevo embudo (web + WhatsApp). Empezamos a probar creativos y escalar.</p>
+                </div>
+                <div class="step">
+                    <div class="step-m">Mes 3+</div>
+                    <div class="step-t">Crecimiento</div>
+                    <p>Iteramos sobre lo que funciona. Más contenido, más pruebas, más ventas.</p>
+                </div>
+            </div>
+            <div class="guarantee">
+                <span class="g-tag">Pago</span>
+                <p>Puesta a punto: <b>50% para arrancar y 50% al entregar</b>. Acompañamiento mensual: pago mes vencido.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experiencia</h2>
+            <p>En LA REAL trabajamos mes a mes con <strong>+25 marcas en Latinoamérica</strong> y hemos trabajado con <strong>+200 marcas a nivel mundial</strong>. Además de Bytes, gestionamos marcas como Leonisa, Cíclico, Dulcey y Cacao Hunters.</p>
+            <div class="mq">
+                <div class="mq-row"><div class="mq-track" id="mq1"></div></div>
+                <div class="mq-row reverse"><div class="mq-track" id="mq2"></div></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Inversión</h2>
+            <div class="sublabel">Puesta a punto (pago único)</div>
+            <div class="pkgs" style="grid-template-columns: 1fr;">
+                <div class="pkg recommended">
+                    <div class="pkg-tag">Arranque</div>
+                    <div class="pkg-name">Puesta a punto</div>
+                    <div class="pkg-sub">Tienda + Email + Diagnóstico + Estrategia</div>
+                    <div class="pkg-price">$5.900.000</div>
+                    <div class="pkg-aud">IVA 0% (desarrollo web para persona natural)</div>
+                </div>
+            </div>
+
+            <div class="sublabel">Acompañamiento mensual</div>
+            <div class="pkgs" style="grid-template-columns: 1fr 1fr;">
+                <div class="pkg">
+                    <div class="pkg-name">Sin UGC</div>
+                    <div class="pkg-sub">Web + Email + Pauta</div>
+                    <div class="pkg-price">$2.500.000</div>
+                    <div class="pkg-unit">+ 5% de venta neta</div>
+                    <div class="pkg-aud">Ustedes pagan directo a los creadores</div>
+                </div>
+                <div class="pkg recommended">
+                    <div class="pkg-tag">Recomendado</div>
+                    <div class="pkg-name">Con UGC</div>
+                    <div class="pkg-sub">Web + Email + Pauta + 20 videos/mes</div>
+                    <div class="pkg-price">$4.000.000</div>
+                    <div class="pkg-unit">+ 5% de venta neta</div>
+                    <div class="pkg-aud">Nosotros pagamos y gestionamos todo</div>
+                </div>
+            </div>
+            <p class="note">La <strong>venta neta</strong> es el total de ventas menos envío e impuestos. El 5% es nuestra manera de crecer junto con ustedes: si ustedes no crecen, nosotros tampoco.</p>
+        </section>
+
+        <div class="next">
+            <h2>Siguiente paso</h2>
+            <p>Si les suena, arrancamos con la puesta a punto y en ~30 días tienen la tienda en vivo. Cualquier duda, escríbanme y la resolvemos. También quedo pendiente de visitarlos en el nuevo centro de producción.</p>
+            <a class="cta" href="https://wa.me/573043148428?text=Hola%20Juanfe%2C%20vi%20la%20propuesta%20de%20Bonatu%20y%20quiero%20avanzar" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Hablemos por WhatsApp
+            </a>
+        </div>
+
+        <div class="foot">
+            <span>Preparado por <img src="logo-la-real.png" alt="LA REAL"> LA REAL — Agencia digital</span>
+            <span>juanfe@larealmarketing.com</span>
+        </div>
+
+    </div>
+
+    <script>
+        const BRANDS = ['Bytes','Cacao Hunters','Dulcey','Kryolan','Panavayu','Barba Roja','Leonisa','Once','Pachha','Zorro y Jaguar','Estruendo','Ukelele','Sandra Botero','Cíclico','IFW','Adriza','Atratus','Gratu'];
+        function brandsHTML(list) {
+            const items = list.map(b => `<span class="mq-item"><span class="word">${b}</span><span class="ast">✱</span></span>`).join('');
+            return items + items;
+        }
+        const half = Math.floor(BRANDS.length / 2);
+        const rotated = [...BRANDS.slice(half), ...BRANDS.slice(0, half)];
+        document.getElementById('mq1').innerHTML = brandsHTML(BRANDS);
+        document.getElementById('mq2').innerHTML = brandsHTML(rotated);
+    </script>
+</body>
+</html>
